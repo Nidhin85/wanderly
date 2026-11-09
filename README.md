@@ -1,43 +1,30 @@
-# Wanderly: Travel Company Homepage
+# Wanderly: Travel & Tourism Homepage
 
-A responsive, single-page homepage for a fictional travel company, built with **Astro**, plain CSS and a little vanilla JavaScript.
+Technical assignment for the Junior Web Developer Intern role at Teknoppy.
 
-**Live demo:** _add your Vercel link here_
+**Live site:** https://wanderly-ivory-gamma.vercel.app
 
-## Features
-- Sticky header with a mobile hamburger menu
-- Hero, destinations, packages, benefits, call to action and footer sections
-- Mobile-first responsive layout (375px / 768px / 1280px)
-- Semantic HTML, alt text on images, SEO meta tags
-- No UI libraries, no Tailwind, no external APIs
+## Tech
+- Astro (component-based structure)
+- Plain CSS with CSS variables
+- Vanilla JavaScript (mobile menu toggle)
+- Deployed on Vercel
 
-## Tech Stack
-Astro, HTML5, CSS3 (variables, Grid, Flexbox), vanilla JavaScript, Google Fonts (Poppins and Inter)
+## Sections
+Header, Hero, Popular Destinations, Travel Packages, Why Choose Us, Call to Action, Footer.
 
-## Getting Started
-```bash
-git clone https://github.com/YOUR-USERNAME/wanderly.git
-cd wanderly
+## Run locally
 npm install
 npm run dev
-```
-Open http://localhost:4321
 
 ## Build
-```bash
 npm run build
-npm run preview
-```
 
-## Project Structure
-```
-src/
-├── components/   one file per section
-├── layouts/      shared HTML shell
-├── pages/        index.astro assembles the page
-└── styles/       global.css (variables and all styles)
-public/images/    local images
-```
+## Project structure
+- src/layouts/Layout.astro: page shell, fonts and meta tags
+- src/components/: one component per section
+- src/styles/global.css: all styles
+- public/images/: local images
 
-## Images
-Photos are from Unsplash/Pexels. Add your own to `public/images/` using the file names listed in the project.
+## AI tools used
+Claude for layout planning and initial code. I reviewed, tested and edited the code myself.
