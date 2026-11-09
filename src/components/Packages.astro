@@ -1,0 +1,57 @@
+---
+const packages = [
+  {
+    name: "Bali Bliss Escape",
+    image: "/images/package-bali.jpg",
+    duration: "6 Days / 5 Nights",
+    price: "₹54,999",
+  },
+  {
+    name: "Swiss Alps Adventure",
+    image: "/images/package-europe.jpg",
+    duration: "8 Days / 7 Nights",
+    price: "₹1,29,999",
+  },
+  {
+    name: "Dubai Luxury Getaway",
+    image: "/images/package-dubai.jpg",
+    duration: "5 Days / 4 Nights",
+    price: "₹69,999",
+  },
+];
+---
+
+<section class="section" id="packages">
+  <div class="container">
+    <h2 class="section-title">Travel Packages</h2>
+    <p class="section-subtitle">
+      All-inclusive trips with flights, stays and sightseeing taken care of.
+    </p>
+
+    <div class="grid grid-3">
+      {packages.map((pack) => (
+        <article class="card">
+          <img
+            class="card-image"
+            src={pack.image}
+            alt={`${pack.name} package`}
+            loading="lazy"
+          />
+          <div class="card-body">
+            <h3>{pack.name}</h3>
+            <div class="package-meta">
+              <span class="duration">{pack.duration}</span>
+              <span class="price">From {pack.price}</span>
+            </div>
+            <a
+              href={`mailto:hello@wanderly.example?subject=Booking enquiry: ${pack.name}`}
+              class="btn btn-primary"
+            >
+              Book Now
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

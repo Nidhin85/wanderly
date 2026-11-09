@@ -1,0 +1,51 @@
+---
+const destinations = [
+  {
+    name: "Bali",
+    image: "/images/bali.jpg",
+    text: "Temples, rice terraces and golden beaches on the Island of the Gods.",
+  },
+  {
+    name: "Dubai",
+    image: "/images/dubai.jpg",
+    text: "Futuristic skylines, desert safaris and world-class shopping.",
+  },
+  {
+    name: "Maldives",
+    image: "/images/maldives.jpg",
+    text: "Crystal-clear lagoons and overwater villas made for relaxing.",
+  },
+  {
+    name: "Switzerland",
+    image: "/images/switzerland.jpg",
+    text: "Alpine trains, snowy peaks and postcard-perfect lakeside towns.",
+  },
+];
+---
+
+<section class="section" id="destinations">
+  <div class="container">
+    <h2 class="section-title">Popular Destinations</h2>
+    <p class="section-subtitle">
+      Four favourites our travellers love, from tropical islands to the Alps.
+    </p>
+
+    <div class="grid grid-4">
+      {destinations.map((place) => (
+        <article class="card">
+          <img
+            class="card-image"
+            src={place.image}
+            alt={`Scenic view of ${place.name}`}
+            loading="lazy"
+          />
+          <div class="card-body">
+            <h3>{place.name}</h3>
+            <p>{place.text}</p>
+            <a href="#packages" class="btn btn-outline">Explore</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
